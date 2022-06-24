@@ -21,6 +21,7 @@ function solution(s) {
 
   for (let i = 0; i < ALPHABET.length; i++) {
     const c = ALPHABET.charAt(i)
+    console.log(c);
     if (s.indexOf(c) < 0) {
       return false
     }
@@ -29,4 +30,6 @@ function solution(s) {
   return true
 }
 
-export default solution
+// export default solution
+let arr = 'addddddddddffffffffffffff'
+console.log(solution(arr));
