@@ -1,6 +1,6 @@
 function solution(students){
     let answer = 0;
-    let Maxnum =0;
+    let Maxnum =Number.MIN_SAFE_INTEGER;
     for(let i=0; i<students.length; i++){
        
 

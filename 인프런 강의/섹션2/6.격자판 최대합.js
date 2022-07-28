@@ -35,3 +35,4 @@ function solution(arr){
     answer=Math.max(answer, sum1, sum2); // 대각선 합과 가로,세로줄 합 중에서 제일 큰 값 중에서 비교함.
     return answer;
 }
+
