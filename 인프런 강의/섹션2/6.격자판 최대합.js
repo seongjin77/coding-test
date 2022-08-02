@@ -36,3 +36,22 @@ function solution(arr){
     return answer;
 }
 
+const solution = (arr) => {
+    let n = arr.length - 1;
+    let sumX = 0, sumY = 0, diagonal_1 = 0, diagonal_2 = 0, answer = 0;
+  
+    for (let i = 0; i <= n; i++) {
+      diagonal_1 += arr[i][i];
+      diagonal_2 += arr[i][n - i];
+  
+      (sumX = 0), (sumY = 0); // 0으로 초기화
+  
+      for (let j = 0; j < n; j++) {
+        sumX += arr[i][j];
+        sumY += arr[j][i];
+      }
+    }
+  
+    answer = Math.max(answer, diagonal_1, diagonal_2, sumX, sumY);
+    return answer;
+  };
