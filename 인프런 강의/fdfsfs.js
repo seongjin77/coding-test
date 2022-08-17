@@ -10,7 +10,4 @@
 // }
 // console.log(eratosthenes(3))
 
-function solution(){
-    var a =1;
-}
-console.log(a);
+console.log( 3 ** 2);
