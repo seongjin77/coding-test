@@ -1,6 +1,6 @@
 function solution(arr,selectNumber){
 
-const sum = [];
+const sum = []; // 3장 뽑아 더한 합을 담아놓을 배열
 
 const getCombinations = function (arr, selectNumber) {
   const results = [];
@@ -22,11 +22,24 @@ const getCombinations = function (arr, selectNumber) {
    return results; //조합 결과 확인용
 }
 
-let 조합 = getCombinations(arr, selectNumber);
-console.log(조합)
+let 조합 = getCombinations(arr, selectNumber); // 조합 함수
+
+for(let i=0; i<조합.length; i++){
+  let 합 = 0;
+  for(let j=0; j<selectNumber; j++){
+    합 += 조합[i][j];
+  }
+  sum.push(합)
+}
+const set = new Set(sum); // 중복제거
+const noOverlapsum = [...set];
+noOverlapsum.sort((a,b)=> b-a); // 내림차순 정렬
+
+return noOverlapsum[selectNumber-1];
+
 
 }
 let arr = [13,15,34,23,45,65,33,11,26,42];
 let k = 3;
-solution(arr,k)
+console.log(solution(arr,k))
 
